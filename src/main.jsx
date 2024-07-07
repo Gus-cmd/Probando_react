@@ -1,12 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import Header from './components/Header';
+import ProductList from './components/ProductList';
 
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <ProductList />
+    </div>
+  );
+};
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+export default App;

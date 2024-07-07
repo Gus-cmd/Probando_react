@@ -3,15 +3,17 @@ import { Card, Button } from 'react-bootstrap';
 
 const ProductCard = ({ product }) => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product.image} />
+    <Card>
+      <Card.Img variant="top" src={product.imagen} />
       <Card.Body>
-        <Card.Title>{product.name}</Card.Title>
-        <Card.Text>{product.description}</Card.Text>
-        <Button variant="primary">${product.price}</Button>
+        <Card.Title>{product.nombre}</Card.Title>
+        <Card.Text>{product.descripcion}</Card.Text>
+        <Card.Text>${product.precio.toFixed(2)}</Card.Text>
+        <Button variant="primary">Comprar</Button>
       </Card.Body>
     </Card>
   );
 };
 
 export default ProductCard;
+
